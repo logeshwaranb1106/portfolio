@@ -1,107 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logeshwaran B | Aspiring Data Scientist</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; color: #333; }
-    header { background: linear-gradient(to right, #1a237e, #283593); color: white; text-align: center; padding: 70px 20px; }
-    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; margin-top: 0; }
-    nav { display: flex; justify-content: center; background: #222; }
-    nav a { color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
-    nav a:hover { background: #444; }
-    section { max-width: 900px; margin: auto; padding: 40px 20px; }
-    h2 { text-align: center; margin-bottom: 20px; color: #1a237e; }
-    .about, .skills, .projects, .contact { background: white; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
-    .skills ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
-    .skills li { background: #e8eaf6; padding: 10px; border-radius: 8px; text-align: center; font-weight: bold; }
-    .projects .card { background: #f9f9f9; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ddd; }
-    .projects .card h3 { margin-top: 0; }
-    .contact a { display: inline-block; margin: 8px; font-size: 1.2rem; color: #283593; text-decoration: none; }
-    footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 20px; }
+    body { scroll-behavior: smooth; }
+    .hero { 
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+    .project-card { transition: transform 0.3s; }
+    .project-card:hover { transform: scale(1.05); }
+    .footer { background: #111; color: #bbb; padding: 20px 0; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Logeshwaran B</h1>
-    <p>Aspiring Data Scientist</p>
-  </header>
-
-  <!-- Navbar -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- About -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I am a postgraduate in Mathematics and Data Science with hands-on experience in Python, 
-      Machine Learning, and Deep Learning projects. As a fresher and aspiring Data Scientist, 
-      I aim to solve real-world problems by applying analytical thinking and AI-powered solutions. 
-      I am passionate about continuous learning and exploring opportunities in Data Science, AI, 
-      and Machine Learning.
-    </p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills">
-    <h2>Key Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>SQL</li>
-      <li>TensorFlow / Keras</li>
-      <li>Pandas & NumPy</li>
-      <li>Machine Learning</li>
-      <li>Deep Learning</li>
-      <li>Data Visualization</li>
-      <li>Streamlit</li>
-    </ul>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>Swiggy Restaurant Recommendation System</h3>
-      <p>Built a recommendation engine using clustering and deployed with Streamlit for personalized restaurant suggestions.</p>
-      <a href="https://github.com/logeshwaranb1106/Swiggy-s-Restaurant-Recommendation-System-using-Streamlit.git" target="_blank">GitHub Repo</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Logeshwaran B</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="card">
-      <h3>Multiclass Fish Image Classification</h3>
-      <p>Developed a CNN-based multiclass model with TensorFlow and Keras. Applied transfer learning and deployed as a Streamlit app.</p>
-      <a href="https://github.com/logeshwaranb1106/Multiclass-Fish-Image-Classification.git" target="_blank">GitHub Repo</a>
-    </div>
-    <div class="card">
-      <h3>UPI Transaction Analyzer</h3>
-      <p>AI-powered app using Python, Pandas, Gemini API, and Streamlit to analyze UPI transactions and provide insights.</p>
-      <a href="https://github.com/logeshwaranb1106/Personal-UPI-Usage-and-Financial-Analyzer-using-LLMs.git" target="_blank">GitHub Repo</a>
-    </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Hi, I'm Logeshwaran B 👋</h1>
+    <p class="lead">Aspiring Data Scientist | Python Enthusiast</p>
+    <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="text-center">I am an aspiring Data Scientist with a strong academic foundation in Mathematics and Data Science. 
+    Passionate about building intelligent systems using Python,Machine Learning and Deep Learning. I enjoy solving real-world 
+    problems through data-driven insights and deploying ML applications with Streamlit.</p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="row text-center">
+      <div class="col-md-3"><h5>Python</h5></div>
+      <div class="col-md-3"><h5>Pytorch</h5></div>
+      <div class="col-md-3"><h5>Data Analysis (Pandas, NumPy)</h5></div>
+      <div class="col-md-3"><h5>Streamlit</h5></div>
+      <div class="col-md-3 mt-3"><h5>SQL</h5></div>
+      <div class="col-md-3 mt-3"><h5>Visualization (Matplotlib, Seaborn, Plotly)</h5></div>
+      <div class="col-md-3 mt-3"><h5>Machine Learning</h5></div>
+      <div class="col-md-3 mt-3"><h5>Deep Learning</h5></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🎬 IMDB Movie Analysis</h5>
+            <p class="card-text">Explored and visualized IMDB datasets to uncover trends, ratings, and correlations.</p>
+            <a href="https://github.com/logeshwaranb1106/IMDB-2024-Data-Scraping-and-Visualizations.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">⚡ PowerPulse: Household Energy Forecast</h5>
+            <p class="card-text">Built ML models to predict household energy consumption using regression techniques.</p>
+            <a href="https://github.com/logeshwaranb1106/PowerPulse-Household-Energy-Usage-Forecast.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📈 Stock Market Analysis</h5>
+            <p class="card-text">Cleaned and analyzed Nifty 50 data, visualized trends, and built predictive models.</p>
+            <a href="https://github.com/logeshwaranb1106/Data-Driven-Stock-Analysis-Organizing-Cleaning-and-Visualizing-Market-Trends.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🍴 Swiggy Restaurant Recommender</h5>
+            <p class="card-text">Developed a Streamlit app recommending restaurants using clustering & similarity.</p>
+            <a href="https://github.com/logeshwaranb1106/Swiggy-s-Restaurant-Recommendation-System-using-Streamlit.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">💸 UPI Transaction Analyzer</h5>
+            <p class="card-text">Built an AI-powered app using LLMs to analyze financial transactions from UPI PDFs.</p>
+            <a href="https://github.com/logeshwaranb1106/Personal-UPI-Usage-and-Financial-Analyzer-using-LLMs.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🐟 Fish Species Classification</h5>
+            <p class="card-text">CNN + Transfer Learning model deployed in Streamlit for multiclass fish recognition.</p>
+            <a href="https://github.com/logeshwaranb1106/Multiclass-Fish-Image-Classification.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- Project 7 -->
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📰 NSE Stock News & Sentiment Analysis</h5>
+            <p class="card-text">Developed an LLM-powered Streamlit app to analyze real-time NSE stock news, extract sentiments, and provide actionable market insights.</p>
+            <a href="https://github.com/logeshwaranb1106/NSE-equities-smart-news.git" class="btn btn-outline-primary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Contact Me</h2>
     <p>📧 <a href="mailto:logeshwaranbofficial@gmail.com">logeshwaranbofficial@gmail.com</a></p>
     <p>
-      <a href="https://www.linkedin.com/in/logeshwaranb1106/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/logeshwaranb1106" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://github.com/logeshwaranb1106" target="_blank" class="btn btn-dark btn-sm">GitHub</a>
+      <a href="https://www.linkedin.com/in/logeshwaranb1106/" target="_blank" class="btn btn-primary btn-sm">LinkedIn</a>
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Logeshwaran B | Aspiring Data Scientist</p>
-  </footer>
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <small>© 2025 Logeshwaran B | Aspiring Data Scientist</small>
+  </div>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
